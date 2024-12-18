@@ -1,0 +1,90 @@
+/* Home.css */
+
+/* Base styles for the table */
+table {
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+h1 {
+  text-align: center;
+  color: blue;
+}
+
+/* Table cells and headers */
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+
+
+/* Container styling */
+.container {
+  margin: 20px;
+  padding: 10px;
+  overflow-x: auto;
+  /* Enable horizontal scroll for small screens */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  table {
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* Stack table rows for narrow screens */
+  table {
+    display: block;
+    width: 100%;
+  }
+
+
+  thead {
+    display: none;
+    /* Hide table headers */
+  }
+
+  tbody tr {
+    display: block;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  tbody tr td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  tbody tr td::before {
+    content: attr(data-label);
+    /* Add a label for each cell */
+    font-weight: bold;
+    margin-right: 10px;
+    color: #333;
+  }
+}
+
+/* .ta { */
+/* border: 1px solid black;
+  border: collapse; */
+/* width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 16px;
+}  
+  */
